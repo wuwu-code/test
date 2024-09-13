@@ -1,0 +1,14 @@
+#redis配置
+spring:
+  data:
+    redis:
+      host: 192.168.59.10 #redis服务
+      port: 6379 #端口
+      password: 123456 #密码
+      connect-timeout: 60000 #连接超时单位ms
+      lettuce:
+        pool: #连接池信息
+          max-active: 512 #最大连接数
+          max-idle: 128 #最大空闲连接数
+          min-idle: 128 #最小空闲连接数
+          max-wait: 1000ms #最大连接等待时间
